@@ -35,9 +35,11 @@
 </ul>
 </td>
 </<tr>
-<tr><td colspan="2">DOCENTES:
+<tr><td colspan="2">ALUMNOS:
 <ul>
-<li>Richart Smith Escobedo Quispe (r.escobedo@ulasalle.edu.pe)</li>
+<li>Gabriela Mistral Pacco Huamani (gpaccoh@ulasalle.edu.pe)</li>
+<li>Gabriela Mistral Pacco Huamani (gpaccoh@ulasalle.edu.pe)</li>
+<li>Cesar Adolfo Laura Mamani (clauram@ulasalle.edu.pe)</li>
 </ul>
 </td>
 </<tr>
@@ -78,8 +80,8 @@ usuarios
 - git config
     - Establece variables de configuración. Por ejemplo para los commits se necesita los datos del desarrollador. Se puede especificar el editor y hasta el tiempo que deseas almacenar tus credenciales en la cache y otras cosas más
     ```sh
-    git config --global user.name "Richart Smith Escobedo Quispe"
-    git config --global user.email r.escobedo@ulasalle.edu.pe
+    git config --global user.name "Jose Rafael Corzo Luis"
+    git config --global user.email jcorzol@ulasalle.edu.pe
     git config --list
     git config user.name
     git config --global core.editor "code --wait"
@@ -94,26 +96,26 @@ usuarios
 - git add
     - Añade archivos al staging area. El punto "." agrega todos
     ```sh
-    git add HolaMundo.java
+    git add calculadora.py
     git add .
     ```
 
 - git commit
     - Sube los archivos al área de staging, en la máquina local. La opción -m permite escribir el mensaje en línea
     ```sh
-    git commit -m "Probando el Hola Mundo"    
+    git commit -m "Probando calculadora"    
     ```
 
 - git clone
     - Clona un repositorio remoto como un repositorio local, en el cual se puede hacer push
     ```sh
-    git clone https://github.com/rescobedoulasalle/test.git
+    git clone https://github.com/Rafoluis/Evidencia2Calculadora
     ```
 
 - git remote
     - Persigue un repositorio remoto para hacer push.
     ```sh
-    git remote add origin https://github.com/rescobedoulasalle/test.git
+    git remote add origin https://github.com/Rafoluis/Evidencia2Calculadora
     ```
 
 - git push
@@ -138,40 +140,42 @@ usuarios
     git log -p -2
     ```
     <pre>
-    6bb6b6e - Richart Escobedo Quispe, hace 3 minutos : Git - GitHub
-    6bb6b6e - Richart Escobedo Quispe, hace 12 minutos : Git - GitHub
-    b36a9fd - Richart Escobedo Quispe, hace 14 minutos : Git - GitHub
-    e86aac8 - Richart Escobedo Quispe, hace 22 minutos : Git - GitHub
-    e58f653 - Richart Escobedo Quispe, hace 31 minutos : first commit
-    5747062 - Richart Escobedo Quispe, hace 35 minutos : first commit
+    177d0cb - jcorzol, 19 minutes ago : [Rafael Corzo][Add Readme]
+    d0a62e6 - jcorzol, 22 minutes ago : commit inicial
     </pre>
 
 - git diff
     - Permite comparar los cambios en los archivos
     ```sh
-    git diff 6bb6b6e 6bb6b6e
+    git diff 177d0cb d0a62e6
     ```
 
 - git branch
     - Permite ver las ramas existentes o crea una rama alternativa al proyecto principal git branch -a
     ```sh
-    git branch prueba1
+    git branch Jose
+    git branch Gabriela
+    git branch Cesar
+    git branch Desarrollo
     git branch
     ```
     <pre>
     * main
-    prueba1
+    Jose
     </pre>
 
 - git checkout
     - Permite regresar a versiones anteriores o saltar a otra rama
     ```sh
-    git checkout prueba1
+    git checkout Jose
+    git checkout Gabriela
+    git checkout Cesar
+    git checkout Desarrollo
 	git branch
     ```
     <pre>
     main
-    * prueba1
+    * Jose
     </pre>
 
 
@@ -183,19 +187,14 @@ usuarios
 ## EJERCICIO/PROBLEMA RESUELTO POR EL DOCENTE
 Primer repositorio en GitHub
 - Creamos un nuevo proyecto en GitHub
-    - ![Nuevo Proyecto GitHub](github_proyecto_programacion.png)
+    - ![Evidencia2Calculadora](github_proyecto_programacion.png)
 
-- Crearemos un repositorio local usando git init
+- Crearemos un repositorio local y usando git clone clonamos el proyecto
     ```sh
-    pwd
-    /home/richart/ulasalle/proyecto
-    git init
+    git clone https://github.com/Rafoluis/Evidencia2Calculadora
     ```
 
 - Crearemos un archivo Readme.md con contenido Markup
-    ```sh
-    echo "# Mi proyecto Git" > README.md
-    ```
 
 - Agregaremos este archivo al staging area usando git add .
     ```sh
@@ -217,7 +216,7 @@ Primer repositorio en GitHub
 
 - Hacemos un primer commit en nuestro repositorio local 
     ```sh
-    git commit -m "Mi primer proyecto en github"
+    git commit -m "commit inicial"
     ```
 - Asociamos el repositorio local con el repositorio remoto 
     ```sh
@@ -232,58 +231,70 @@ Primer repositorio en GitHub
 - Ahora podemos verificar en GitHub que nuestro repositorio se actualizó con el proyecto local
     - ![Readme.md](Readme.md.png)
 
-- Cree una clase Java HolaMundo.java que imprima un saludo, compílelo, ignore archivos binarios, agregue archivo al stating area, haga commit y súbalo al repositorio GitHub.
-    ```sh
-    vim HolaMundo.java
-    ```
-    <pre>
-    public class HolaMundo
-    {
-        public static void main(String args[]) {
-        
-            /** */
-            System.out.println ("¡Hola mundo!");
+- Cree una archivo Python calculadora.py que imprima un saludo, compílelo, ignore archivos binarios, agregue archivo al stating area, haga commit y súbalo al repositorio GitHub.
 
-        }
-    }
-    </pre>
-    ```sh    
-    java -version
-    ```
     <pre>
-    openjdk version "11.0.14" 2022-01-18
+        def add(num1, num2):
+        return num1 + num2
+
+        def subtract(num1, num2):
+        return num1 - num2
+
+        def multiply(num1, num2):
+        return num1 * num2
+
+        def divide(num1, num2):
+        return num1 / num2
+
+        print("Please select operation -\n" \
+            "1. Add\n" \
+            "2. Subtract\n" \
+            "3. Multiply\n" \
+            "4. Divide\n")
+ 
+        select = int(input("Select operations form 1, 2, 3, 4 :"))
+
+        number_1 = int(input("Enter first number: "))
+        number_2 = int(input("Enter second number: "))
+
+        if select == 1:
+        print(number_1, "+", number_2, "=",
+                        add(number_1, number_2))
+
+        elif select == 2:
+        print(number_1, "-", number_2, "=",
+                        subtract(number_1, number_2))
+
+        elif select == 3:
+        print(number_1, "*", number_2, "=",
+                        multiply(number_1, number_2))
+
+        elif select == 4:
+        print(number_1, "/", number_2, "=",
+                        divide(number_1, number_2))
+        else:
+        print("Invalid input") 
     </pre>
-    ```sh
-    javac HolaMundo.java
-    java HolaMundo
-    ```
+
     <pre>
-    ¡Hola mundo!
+        Please select operation -
+        1. Add
+        2. Subtract
+        3. Multiply
+        4. Divide
+        Select operations form 1, 2, 3, 4 : 1
+        Enter first number : 15
+        Enter second number : 14
+        15 + 14 = 29
     </pre>
-    ```sh
-    vim .gitignore
-    ```
+
     <pre>
     *.class
     .gitignore
     </pre>
     ```sh
-    git add HolaMundo.java
-    git commit -m "Hola Mundo"
+    git add calculadora.py
+    git commit -m "Final"
     git push -u origin main
     ```
     
-## EJERCICIOS/PROBLEMAS PROPUESTOS
-- Cree una cuenta de usuario en github.
-- Configure su cuenta de estudiante (https://education.github.com/pack).
-- Cree un nuevo proyecto personal y desarrolle el ejercicio resuelto en clase. Haga 3 commits y muestre los 3 últimos.
-- Cree un proyecto grupal para resolver el siguiente problema: Se desea crear una clase Calculator en Java, que tenga las siguientes operaciones: add, sub, mul, div, mod; estas operaciones recibirán dos enteros y devolverán un entero. (Forme grupos de 3 a 5 personas). Cree ramas para cada integrante y cada cierto tiempo una las ramas al main.
-
-## CUESTIONARIO
-- ¿Por qué Git es una herramienta importante en el curso?
-- ¿Qué conductas éticas debe promocionarse cuando se usa un Sistema de Control de Versiones?
-- ¿Qué son los entándares de codificación?
-
-## REFERENCIAS Y BIBLIOGRÁFIA RECOMENDADAS
-- https://guides.github.com/
-- https://git-scm.com/book/es/v2
