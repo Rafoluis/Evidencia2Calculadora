@@ -38,7 +38,7 @@
 <tr><td colspan="2">ALUMNOS:
 <ul>
 <li>Gabriela Mistral Pacco Huamani (gpaccoh@ulasalle.edu.pe)</li>
-<li>Gabriela Mistral Pacco Huamani (gpaccoh@ulasalle.edu.pe)</li>
+<li>Jose Rafael Corzo Luis (jcorzol@ulasalle.edu.pe)</li>
 <li>Cesar Adolfo Laura Mamani (clauram@ulasalle.edu.pe)</li>
 </ul>
 </td>
