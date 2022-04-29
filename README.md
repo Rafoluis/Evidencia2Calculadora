@@ -187,7 +187,7 @@ usuarios
 ## EJERCICIO/PROBLEMA RESUELTO POR EL DOCENTE
 Primer repositorio en GitHub
 - Creamos un nuevo proyecto en GitHub
-    - ![Evidencia2Calculadora](github_proyecto_programacion.png)
+    - ![Evidencia2Calculadora]
 
 - Crearemos un repositorio local y usando git clone clonamos el proyecto
     ```sh
@@ -218,18 +218,13 @@ Primer repositorio en GitHub
     ```sh
     git commit -m "commit inicial"
     ```
-- Asociamos el repositorio local con el repositorio remoto 
-    ```sh
-    git remote add origin https://github.com/rescobedoulasalle/test.git
-    ```
-
 - Actualizamos el repositorio remoto
     ```sh
     git push -u origin main
     ```
 
 - Ahora podemos verificar en GitHub que nuestro repositorio se actualizó con el proyecto local
-    - ![Readme.md](Readme.md.png)
+    - ![Readme.md]
 
 - Cree una archivo Python calculadora.py que imprima un saludo, compílelo, ignore archivos binarios, agregue archivo al stating area, haga commit y súbalo al repositorio GitHub.
 
